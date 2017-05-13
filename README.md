@@ -1,14 +1,11 @@
 # CodePath
 iOS (https://courses.codepath.com/courses/ios_university/)
-- Tip-Calculator
-![Tip-Calculator] ()
 
-- Tumblr
+- Tip-Calculator (https://github.com/tramxme/CodePath/tree/master/iOS/Tip-Calculator)
 
-![myTumblr](iOS/myTumblr/resources/tumblr.gif)
+- Tumblr (https://github.com/tramxme/CodePath/tree/master/iOS/myTumblr)
 
-- Flicks
+- Flicks (https://github.com/tramxme/CodePath/tree/master/iOS/myFlicks)
 
-![myFlicks](iOS/myFlicks/resources/flicks.gif)
 
 
