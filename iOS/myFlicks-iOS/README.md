@@ -31,7 +31,5 @@
 
 
 ## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
 ![Video Walkthrough](resources/flicks.gif)
 
