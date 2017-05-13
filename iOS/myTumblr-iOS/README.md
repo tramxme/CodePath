@@ -7,8 +7,6 @@ This is a simple Tumblr app built for Lab in CodePath iOS class, week 1
 * [X]  MileStone 3: Build the Photo Feed
 
 ## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
 ![Video WalkThrough](resources/tumblr.gif)
 
 
