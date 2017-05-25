@@ -13,11 +13,15 @@
 
 * [X] User can pull to refresh the movie list.
 
+* [ ] User can view movie details by tapping on a cell
+
+* [ ] User can select from a tab bar fro either "Now Playing" or "Top Rated" movies
+
+* [ ] Customize the selection effect of the cell
+
 
 **Additional features**:
-* [ ] User sees an error message when there's a networking error. You may not use UIAlertController or a 3rd party library to display the error. See this screenshot for what the error message should look like.
-   - Hint: Using the hidden property of a view can be helpful to toggle the network error view's visibility.
-   - Hint: You can simulate a network error, by turning off the wifi on your computer before running the simulator. You will also want to Reset Content and Settings in your simulator (Found under the Simulator drop down menu) before you run the app too, otherwise the images will be fetched from the cache instead of the network. The setImageWithURL method stores images in cache automatically behind the scenes.
+* [ ] User sees an error message when there's a networking error. You may not use UIAlertController or a 3rd party library to display the error
 
 * [X] Movies are displayed using a CollectionView instead of a TableView.
 
@@ -29,6 +33,9 @@
 
 * [ ] Customize the UI. You can use Iconmonstr and The Noun Project as good sources of images.
 
+* [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
+
+* [ ] Customize the navigation bar.
 
 ## Video Walkthrough
 ![Video Walkthrough](resources/flicks.gif)
