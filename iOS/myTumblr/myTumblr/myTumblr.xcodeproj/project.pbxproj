@@ -15,6 +15,8 @@
 		372098A01EC4DF1600B73D34 /* myTumblrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3720989F1EC4DF1600B73D34 /* myTumblrUITests.swift */; };
 		372098AE1EC4DFE500B73D34 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372098AD1EC4DFE500B73D34 /* PhotosViewController.swift */; };
 		372098B11EC4E21200B73D34 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372098B01EC4E21200B73D34 /* PhotoCell.swift */; };
+		37C44B6F1ECD1A5A000EA847 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C44B6E1ECD1A5A000EA847 /* PhotoDetailViewController.swift */; };
+		37E2C1361ED6BA3800E3FEE4 /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E2C1351ED6BA3800E3FEE4 /* InfiniteScrollActivityView.swift */; };
 		549D64E99F1016C7CB7D967E /* Pods_myTumblr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D90349523894D713182312D /* Pods_myTumblr.framework */; };
 		78465463AF597423D9F57B3E /* Pods_myTumblrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DFD78E9E1E2CBCF668F87D /* Pods_myTumblrUITests.framework */; };
 		9C8EBD4BA510ABE782F09EF9 /* Pods_myTumblrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133A916E4ED2B8E15AE05AA9 /* Pods_myTumblrTests.framework */; };
@@ -55,6 +57,8 @@
 		372098A11EC4DF1600B73D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		372098AD1EC4DFE500B73D34 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		372098B01EC4E21200B73D34 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		37C44B6E1ECD1A5A000EA847 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		37E2C1351ED6BA3800E3FEE4 /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
 		3D90349523894D713182312D /* Pods_myTumblr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myTumblr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DFD78E9E1E2CBCF668F87D /* Pods_myTumblrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myTumblrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A632CD66EDCB3C3C500D3A8 /* Pods-myTumblr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myTumblr.release.xcconfig"; path = "Pods/Target Support Files/Pods-myTumblr/Pods-myTumblr.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 				372098861EC4DF1600B73D34 /* Assets.xcassets */,
 				372098881EC4DF1600B73D34 /* LaunchScreen.storyboard */,
 				3720988B1EC4DF1600B73D34 /* Info.plist */,
+				37E2C1351ED6BA3800E3FEE4 /* InfiniteScrollActivityView.swift */,
 			);
 			path = myTumblr;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				372098AD1EC4DFE500B73D34 /* PhotosViewController.swift */,
+				37C44B6E1ECD1A5A000EA847 /* PhotoDetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -457,8 +463,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E2C1361ED6BA3800E3FEE4 /* InfiniteScrollActivityView.swift in Sources */,
 				372098801EC4DF1600B73D34 /* AppDelegate.swift in Sources */,
 				372098B11EC4E21200B73D34 /* PhotoCell.swift in Sources */,
+				37C44B6F1ECD1A5A000EA847 /* PhotoDetailViewController.swift in Sources */,
 				372098AE1EC4DFE500B73D34 /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
