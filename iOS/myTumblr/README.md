@@ -18,8 +18,10 @@ This is a simple Tumblr app built for Lab in CodePath iOS class, week 1
 
 ## Video Progress Walkthrough
 * Week 1 progress
+
 ![Week 1](resources/tumblr1.gif)
 
 * Week 2 progress
+
 ![Week 2](resources/tumblr2.gif)
 
