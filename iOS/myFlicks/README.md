@@ -13,9 +13,9 @@
 
 * [X] User can pull to refresh the movie list.
 
-* [ ] User can view movie details by tapping on a cell
+* [X] User can view movie details by tapping on a cell
 
-* [ ] User can select from a tab bar fro either "Now Playing" or "Top Rated" movies
+* [ ] User can select from a tab bar from either "Now Playing" or "Top Rated" movies
 
 * [ ] Customize the selection effect of the cell
 

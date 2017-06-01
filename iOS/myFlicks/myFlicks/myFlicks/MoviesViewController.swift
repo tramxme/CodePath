@@ -56,8 +56,7 @@ class MoviesViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     func refreshControlAction() {
         //Loading data from the network
-        let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")!
+        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         
@@ -67,7 +66,7 @@ class MoviesViewController: UIViewController, UICollectionViewDelegate, UICollec
             if error == nil{
                 if let data = data {
                     if let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
-                        print(dataDictionary)
+                        //print(dataDictionary)
                         
                         //Hide HUD once the network request come back (must be done on the main UI thread)
                         MBProgressHUD.hide(for: self.view, animated: true)
@@ -105,7 +104,7 @@ class MoviesViewController: UIViewController, UICollectionViewDelegate, UICollec
         self.collectionView.reloadData()
     }
     
-    // called when cancel button pressed
+    //Called when cancel button pressed
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar){
         searchBar.showsCancelButton = false
         searchBar.text = ""
@@ -140,40 +139,23 @@ class MoviesViewController: UIViewController, UICollectionViewDelegate, UICollec
             // No poster image. Can either set to nil (no image) or a default movie poster image that you include as an asset
             cell.posterView.image = nil
         }
-        print(indexPath.row)
         return cell
     }
 
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+ 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+        let destination = segue.destination as! MovieDetailViewController
+        let indexPath = collectionView.indexPath(for: sender as! UICollectionViewCell)
+        //let cell = collectionView.cellForItem(at: indexPath!) as! MovieCell
+        //let cell = sender as! MovieCell
+        let movie = filteredMovies?[(indexPath?.row)!]
+        
+        destination.movie = movie!
     }
-    */
+    
 
 }
