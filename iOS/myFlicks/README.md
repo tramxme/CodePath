@@ -46,5 +46,6 @@
 
 
 * Week 2 progress
+
 ![Video Walkthrough](resources/flicks2.gif)
 
