@@ -20,6 +20,8 @@ class MoviesViewController: UIViewController, UICollectionViewDelegate, UICollec
     var movies: [NSDictionary]?
     var refreshControl : UIRefreshControl!
     var filteredMovies : [NSDictionary]? = []
+    
+    var endpoint: String = ""
 
     
     override func viewDidLoad() {
@@ -56,7 +58,7 @@ class MoviesViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     func refreshControlAction() {
         //Loading data from the network
-        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
+        let url = URL(string: "https://api.themoviedb.org/3/movie/\(endpoint)?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         
@@ -144,18 +146,25 @@ class MoviesViewController: UIViewController, UICollectionViewDelegate, UICollec
 
  
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.backgroundColor = UIColor .gray
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.backgroundColor = UIColor .white
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        let cell = sender as! MovieCell
         let destination = segue.destination as! MovieDetailViewController
-        let indexPath = collectionView.indexPath(for: sender as! UICollectionViewCell)
-        //let cell = collectionView.cellForItem(at: indexPath!) as! MovieCell
-        //let cell = sender as! MovieCell
+        let indexPath = collectionView.indexPath(for: cell)
         let movie = filteredMovies?[(indexPath?.row)!]
         
         destination.movie = movie!
     }
-    
-
 }

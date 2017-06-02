@@ -14,10 +14,11 @@
 * [X] User can pull to refresh the movie list.
 
 * [X] User can view movie details by tapping on a cell
+(For some reason, you have to press really hard on the cell to view details)
 
-* [ ] User can select from a tab bar from either "Now Playing" or "Top Rated" movies
+* [X] User can select from a tab bar from either "Now Playing" or "Top Rated" movies
 
-* [ ] Customize the selection effect of the cell
+* [X] Customize the selection effect of the cell
 
 
 **Additional features**:
@@ -37,6 +38,13 @@
 
 * [ ] Customize the navigation bar.
 
+
 ## Video Walkthrough
-![Video Walkthrough](resources/flicks.gif)
+* Week 1 progress
+
+![Video Walkthrough](resources/flicks1.gif)
+
+
+* Week 2 progress
+![Video Walkthrough](resources/flicks2.gif)
 
